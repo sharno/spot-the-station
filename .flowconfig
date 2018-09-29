@@ -1,0 +1,17 @@
+[include]
+
+[ignore]
+
+[libs]
+
+[lints]
+sketchy-null=error
+untyped-type-import=error
+unclear-type=error
+unsafe-getters-setters=error
+
+[strict]
+
+[options]
+
+[version]

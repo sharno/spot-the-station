@@ -22,160 +22,7 @@ export default class App extends React.Component {
         {
           name: "Cairo",
           url:
-            "https://spotthestation.nasa.gov/sightings/xml_files/Egypt_None_Cairo.xml",
-          response: `<?xml version="1.0" encoding="utf-8"?>
-          <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-            <channel>
-            <title>SpotTheStation - Sightings for Cairo</title>
-            <link>https://spotthestation.nasa.gov/sightings/view.cfm?country=Egypt&amp;region=None&amp;city=Cairo</link>
-            <description>Satellite Sightings Information for Cairo</description>
-            <language>en-us</language>
-            <pubDate>29 Sep 2018 00:05:01 GMT</pubDate>
-            <lastBuildDate>29 Sep 2018 00:05:01 GMT</lastBuildDate>
-            <managingEditor>HQ-spotthestation@mail.nasa.gov</managingEditor>
-            <webMaster>HQ-spotthestation@mail.nasa.gov</webMaster>
-            <atom:link href="https://spotthestation.nasa.gov/sightings/view.cfm?country=Egypt&amp;region=None&amp;city=Cairo" rel="self" type="application/rss+xml" />
-                <item>
-          <title>2018-10-09 ISS Sighting</title>
-          <pubDate>29 Sep 2018 00:05:01 GMT</pubDate>
-          <description>
-          Date: Tuesday Oct 9, 2018 &lt;br/&gt;
-          Time: 6:43 PM &lt;br/&gt;
-          Duration: less than  1 minute &lt;br/&gt;
-          Maximum Elevation: 11&#176; &lt;br/&gt;
-          Approach: 10&#176; above N &lt;br/&gt;
-          Departure: 11&#176; above NNE &lt;br/&gt;
-          </description>
-          <guid>https://spotthestation.nasa.gov/sightings/view.cfm?country=Egypt&amp;region=None&amp;city=Cairo&amp;ss=5A6D8085-9A4D-8218-93B11A11527EC4EF</guid>
-          </item> 			<item>
-          <title>2018-10-10 ISS Sighting</title>
-          <pubDate>29 Sep 2018 00:05:01 GMT</pubDate>
-          <description>
-          Date: Wednesday Oct 10, 2018 &lt;br/&gt;
-          Time: 7:26 PM &lt;br/&gt;
-          Duration: less than  1 minute &lt;br/&gt;
-          Maximum Elevation: 16&#176; &lt;br/&gt;
-          Approach: 11&#176; above NW &lt;br/&gt;
-          Departure: 16&#176; above NW &lt;br/&gt;
-          </description>
-          <guid>https://spotthestation.nasa.gov/sightings/view.cfm?country=Egypt&amp;region=None&amp;city=Cairo&amp;ss=5A6D8086-CB79-E993-6EEF8E946B7314D4</guid>
-          </item> 			<item>
-          <title>2018-10-11 ISS Sighting</title>
-          <pubDate>29 Sep 2018 00:05:01 GMT</pubDate>
-          <description>
-          Date: Thursday Oct 11, 2018 &lt;br/&gt;
-          Time: 6:35 PM &lt;br/&gt;
-          Duration: 3 minutes &lt;br/&gt;
-          Maximum Elevation: 28&#176; &lt;br/&gt;
-          Approach: 11&#176; above NNW &lt;br/&gt;
-          Departure: 28&#176; above NE &lt;br/&gt;
-          </description>
-          <guid>https://spotthestation.nasa.gov/sightings/view.cfm?country=Egypt&amp;region=None&amp;city=Cairo&amp;ss=5A6D8087-EBC6-D629-27F3362685E49364</guid>
-          </item> 			<item>
-          <title>2018-10-12 ISS Sighting</title>
-          <pubDate>29 Sep 2018 00:05:01 GMT</pubDate>
-          <description>
-          Date: Friday Oct 12, 2018 &lt;br/&gt;
-          Time: 5:46 PM &lt;br/&gt;
-          Duration: 1 minute &lt;br/&gt;
-          Maximum Elevation: 15&#176; &lt;br/&gt;
-          Approach: 15&#176; above NE &lt;br/&gt;
-          Departure: 11&#176; above ENE &lt;br/&gt;
-          </description>
-          <guid>https://spotthestation.nasa.gov/sightings/view.cfm?country=Egypt&amp;region=None&amp;city=Cairo&amp;ss=5A6D8088-CE6F-3B4F-0BB30AA59BC36C7E</guid>
-          </item> 			<item>
-          <title>2018-10-12 ISS Sighting</title>
-          <pubDate>29 Sep 2018 00:05:01 GMT</pubDate>
-          <description>
-          Date: Friday Oct 12, 2018 &lt;br/&gt;
-          Time: 7:20 PM &lt;br/&gt;
-          Duration: less than  1 minute &lt;br/&gt;
-          Maximum Elevation: 28&#176; &lt;br/&gt;
-          Approach: 20&#176; above WNW &lt;br/&gt;
-          Departure: 28&#176; above W &lt;br/&gt;
-          </description>
-          <guid>https://spotthestation.nasa.gov/sightings/view.cfm?country=Egypt&amp;region=None&amp;city=Cairo&amp;ss=5A6D8089-F785-006C-A2E662AB85EBDDE3</guid>
-          </item> 	</channel></rss>
-    `
-        },
-        {
-          name: "Cairo",
-          url:
-            "https://spotthestation.nasa.gov/sightings/xml_files/Egypt_None_Cairo.xml",
-          response: `<?xml version="1.0" encoding="utf-8"?>
-          <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-            <channel>
-            <title>SpotTheStation - Sightings for Cairo</title>
-            <link>https://spotthestation.nasa.gov/sightings/view.cfm?country=Egypt&amp;region=None&amp;city=Cairo</link>
-            <description>Satellite Sightings Information for Cairo</description>
-            <language>en-us</language>
-            <pubDate>29 Sep 2018 00:05:01 GMT</pubDate>
-            <lastBuildDate>29 Sep 2018 00:05:01 GMT</lastBuildDate>
-            <managingEditor>HQ-spotthestation@mail.nasa.gov</managingEditor>
-            <webMaster>HQ-spotthestation@mail.nasa.gov</webMaster>
-            <atom:link href="https://spotthestation.nasa.gov/sightings/view.cfm?country=Egypt&amp;region=None&amp;city=Cairo" rel="self" type="application/rss+xml" />
-                <item>
-          <title>2018-10-09 ISS Sighting</title>
-          <pubDate>29 Sep 2018 00:05:01 GMT</pubDate>
-          <description>
-          Date: Tuesday Oct 9, 2018 &lt;br/&gt;
-          Time: 6:43 PM &lt;br/&gt;
-          Duration: less than  1 minute &lt;br/&gt;
-          Maximum Elevation: 11&#176; &lt;br/&gt;
-          Approach: 10&#176; above N &lt;br/&gt;
-          Departure: 11&#176; above NNE &lt;br/&gt;
-          </description>
-          <guid>https://spotthestation.nasa.gov/sightings/view.cfm?country=Egypt&amp;region=None&amp;city=Cairo&amp;ss=5A6D8085-9A4D-8218-93B11A11527EC4EF</guid>
-          </item> 			<item>
-          <title>2018-10-10 ISS Sighting</title>
-          <pubDate>29 Sep 2018 00:05:01 GMT</pubDate>
-          <description>
-          Date: Wednesday Oct 10, 2018 &lt;br/&gt;
-          Time: 7:26 PM &lt;br/&gt;
-          Duration: less than  1 minute &lt;br/&gt;
-          Maximum Elevation: 16&#176; &lt;br/&gt;
-          Approach: 11&#176; above NW &lt;br/&gt;
-          Departure: 16&#176; above NW &lt;br/&gt;
-          </description>
-          <guid>https://spotthestation.nasa.gov/sightings/view.cfm?country=Egypt&amp;region=None&amp;city=Cairo&amp;ss=5A6D8086-CB79-E993-6EEF8E946B7314D4</guid>
-          </item> 			<item>
-          <title>2018-10-11 ISS Sighting</title>
-          <pubDate>29 Sep 2018 00:05:01 GMT</pubDate>
-          <description>
-          Date: Thursday Oct 11, 2018 &lt;br/&gt;
-          Time: 6:35 PM &lt;br/&gt;
-          Duration: 3 minutes &lt;br/&gt;
-          Maximum Elevation: 28&#176; &lt;br/&gt;
-          Approach: 11&#176; above NNW &lt;br/&gt;
-          Departure: 28&#176; above NE &lt;br/&gt;
-          </description>
-          <guid>https://spotthestation.nasa.gov/sightings/view.cfm?country=Egypt&amp;region=None&amp;city=Cairo&amp;ss=5A6D8087-EBC6-D629-27F3362685E49364</guid>
-          </item> 			<item>
-          <title>2018-10-12 ISS Sighting</title>
-          <pubDate>29 Sep 2018 00:05:01 GMT</pubDate>
-          <description>
-          Date: Friday Oct 12, 2018 &lt;br/&gt;
-          Time: 5:46 PM &lt;br/&gt;
-          Duration: 1 minute &lt;br/&gt;
-          Maximum Elevation: 15&#176; &lt;br/&gt;
-          Approach: 15&#176; above NE &lt;br/&gt;
-          Departure: 11&#176; above ENE &lt;br/&gt;
-          </description>
-          <guid>https://spotthestation.nasa.gov/sightings/view.cfm?country=Egypt&amp;region=None&amp;city=Cairo&amp;ss=5A6D8088-CE6F-3B4F-0BB30AA59BC36C7E</guid>
-          </item> 			<item>
-          <title>2018-10-12 ISS Sighting</title>
-          <pubDate>29 Sep 2018 00:05:01 GMT</pubDate>
-          <description>
-          Date: Friday Oct 12, 2018 &lt;br/&gt;
-          Time: 7:20 PM &lt;br/&gt;
-          Duration: less than  1 minute &lt;br/&gt;
-          Maximum Elevation: 28&#176; &lt;br/&gt;
-          Approach: 20&#176; above WNW &lt;br/&gt;
-          Departure: 28&#176; above W &lt;br/&gt;
-          </description>
-          <guid>https://spotthestation.nasa.gov/sightings/view.cfm?country=Egypt&amp;region=None&amp;city=Cairo&amp;ss=5A6D8089-F785-006C-A2E662AB85EBDDE3</guid>
-          </item> 	</channel></rss>
-    `
+            "https://spotthestation.nasa.gov/sightings/xml_files/Egypt_None_Cairo.xml"
         }
       ],
       duration: 3,
@@ -189,23 +36,16 @@ export default class App extends React.Component {
     //   if (urls && duration) {
     //     this.setState({ urls, duration });
     //   }
-    //   this.updateSpottings();
+    //   this.updateSightings();
     // });
-    // setTimeout(this.updateSpottings, 1000 * 60 * 60);
-    this.setState({
-      cities: this.state.cities.map(city => ({
-        ...city,
-        sightings: parseResponse(city.response)
-      }))
-    });
+    setInterval(this.updateSightings, 10000);
+    this.updateSightings();
   }
 
-  updateSpottings = async () => {
-    const spottings = new Map(
-      await getSightings(this.state.urls, this.state.duration)
-    );
-    console.log(this.state.urls, this.state.duration, spottings);
-    this.setState({ spottings });
+  updateSightings = async () => {
+    const cities = await getSightings(this.state.cities);
+    console.log(cities);
+    this.setState({ cities });
   };
 
   render() {
@@ -218,11 +58,11 @@ export default class App extends React.Component {
           </Dimmer>
         ) : null}
         <Grid.Row>
-          <Grid.Column width={3} />
-          <Grid.Column textAlign="center" width={10}>
+          <Grid.Column width={5} />
+          <Grid.Column textAlign="center" width={6}>
             <Header as="h2">Spot the station</Header>
           </Grid.Column>
-          <Grid.Column width={3}>
+          <Grid.Column width={5}>
             <Button onClick={() => this.setState({ editing: !editing })}>
               {editing ? "Save" : "Edit"}
             </Button>
@@ -327,27 +167,15 @@ export default class App extends React.Component {
   }
 }
 
-function getSightings(urls, duration) {
-  const spottings = [...Object.keys(urls)].map(async name => [
-    name,
-    await fetch(urls[name])
-      .then(response => response.text())
-      .then(bodyText => {
-        const xmlDoc = new DOMParser().parseFromString(bodyText, "text/xml");
-        const ss = [...xmlDoc.getElementsByTagName("description")]
-          .map(s => s.innerHTML)
-          .filter(s => /.*Duration: \d+.*/i.test(s))
-          .filter(s => {
-            const matching = s.match(/.*Duration: (\d+).*/i);
-            return matching && matching.length > 1
-              ? +matching[1] >= duration
-              : false;
-          })
-          .map(s => s.replace(/&lt;br\/&gt;/g, "--"));
-        return ss;
-      })
-  ]);
-  return Promise.all(spottings);
+function getSightings(cities) {
+  const citiesUpdated = cities.map(
+    async city =>
+      await fetch(city.url).then(response => ({
+        ...city,
+        sightings: parseResponse(response.text())
+      }))
+  );
+  return Promise.all(citiesUpdated);
 }
 
 function parseResponse(response) {
@@ -362,6 +190,5 @@ function parseResponse(response) {
         .map(e => e.trim())
         .filter(e => e !== "")
     }));
-  console.log(sightings);
   return sightings;
 }

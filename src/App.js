@@ -9,9 +9,12 @@ import {
   Loader,
   Header,
   List,
-  Form
+  Form,
+  Accordion
 } from "semantic-ui-react";
 import "semantic-ui-css/semantic.css";
+
+const chrome = window.chrome;
 
 export default class App extends React.Component {
   constructor(props) {
@@ -31,25 +34,46 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
-    // chrome.storage.sync.get(["urls", "duration"], ({ urls, duration }) => {
-    //   console.log(urls, duration);
-    //   if (urls && duration) {
-    //     this.setState({ urls, duration });
-    //   }
-    //   this.updateSightings();
-    // });
+    chrome.storage.sync.get(["cities"], ({ cities }) => {
+      console.log(cities);
+      if (cities != null) {
+        this.setState({ cities }, this.updateSightings);
+      }
+    });
+
     setInterval(this.updateSightings, 10000);
     this.updateSightings();
   }
 
+  saveChanges() {
+    chrome.storage.sync.set({ cities: this.state.cities });
+  }
+
   updateSightings = async () => {
     const cities = await getSightings(this.state.cities);
-    console.log(cities);
     this.setState({ cities });
   };
 
   render() {
     const { cities, loading, editing } = this.state;
+    const citiesPanel = cities.map((city, i) => ({
+      key: i,
+      title: city.name,
+      content: city.sightings
+        ? city.sightings.map((s, i) => (
+            <List divided inverted relaxed key={i}>
+              <List.Item>
+                <List>
+                  {s.info.map((e, i) => (
+                    <List.Item key={i}>{e}</List.Item>
+                  ))}
+                </List>
+              </List.Item>
+            </List>
+          ))
+        : null
+    }));
+
     return (
       <Grid padded>
         {loading ? (
@@ -63,7 +87,12 @@ export default class App extends React.Component {
             <Header as="h2">Spot the station</Header>
           </Grid.Column>
           <Grid.Column width={5}>
-            <Button onClick={() => this.setState({ editing: !editing })}>
+            <Button
+              onClick={() => {
+                this.setState({ editing: !editing });
+                editing && this.saveChanges();
+              }}
+            >
               {editing ? "Save" : "Edit"}
             </Button>
           </Grid.Column>
@@ -133,32 +162,13 @@ export default class App extends React.Component {
         ) : (
           <Grid.Row>
             <Grid.Column>
-              <List divided inverted relaxed>
-                {cities.map((city, i) => (
-                  <Segment inverted key={i}>
-                    <List.Item>
-                      <List.Content>
-                        <List.Header>{city.name}</List.Header>
-                      </List.Content>
-                    </List.Item>
-                    <List.Item>
-                      {city.sightings
-                        ? city.sightings.map((s, i) => (
-                            <List divided inverted relaxed key={i}>
-                              <List.Item>
-                                <List>
-                                  {s.info.map((e, i) => (
-                                    <List.Item key={i}>{e}</List.Item>
-                                  ))}
-                                </List>
-                              </List.Item>
-                            </List>
-                          ))
-                        : null}
-                    </List.Item>
-                  </Segment>
-                ))}
-              </List>
+              <Segment inverted>
+                <Accordion
+                  defaultActiveIndex={0}
+                  panels={citiesPanel}
+                  inverted
+                />
+              </Segment>
             </Grid.Column>
           </Grid.Row>
         )}
@@ -170,10 +180,12 @@ export default class App extends React.Component {
 function getSightings(cities) {
   const citiesUpdated = cities.map(
     async city =>
-      await fetch(city.url).then(response => ({
-        ...city,
-        sightings: parseResponse(response.text())
-      }))
+      await fetch(city.url)
+        .then(response => response.text())
+        .then(response => ({
+          ...city,
+          sightings: parseResponse(response)
+        }))
   );
   return Promise.all(citiesUpdated);
 }
